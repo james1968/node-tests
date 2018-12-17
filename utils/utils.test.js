@@ -22,3 +22,16 @@ it('should square a number', () => {
 	// 	throw new Error(`Expected 44, but got ${res}`)
 	// }
 });
+
+it('should include first and last names', () => {
+	var user = {
+		age: '26',
+		location: 'here'
+	}
+
+	var res = utils.setName(user, 'James Baker');
+	expect(res).toInclude({
+		firstName: 'James',
+		lastName: 'Baker'
+	})
+});
