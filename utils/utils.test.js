@@ -6,11 +6,14 @@ it('should add two numbers', () => {
 	var res = utils.add(33, 11);
 	
 	expect(res).toBe(44).toBeA('number');
+});
 
-	
-// 	if (res !== 44) {
-// 		throw new Error(`Expected 44, but got ${res}`)
-// 	}
+it('should async add two numbers', (done) => {
+	utils.asyncAdd(45, 59, (sum) => {
+		expect(sum).toBe(104).toBeA('number');
+		done();
+	});
+
 });
 
 it('should square a number', () => {
@@ -21,6 +24,15 @@ it('should square a number', () => {
 	// if (res !== 81) {
 	// 	throw new Error(`Expected 44, but got ${res}`)
 	// }
+});
+
+it('should async square a number', (done) => {
+	utils.asyncSquare(4, (square) => {
+		expect(square).toBe(16).toBeA('number');
+		done();
+	});
+
+	
 });
 
 it('should include first and last names', () => {
