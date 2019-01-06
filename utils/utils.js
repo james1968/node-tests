@@ -1,3 +1,4 @@
+/*jshint esversion: 6*/
 module.exports.add = (a, b) => a + b;
 
 module.exports.asyncAdd = (a, b, callback) => {
